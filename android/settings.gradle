@@ -1,0 +1,3 @@
+rootProject.name = 'Eseness'
+
+include ':app'
