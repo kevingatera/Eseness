@@ -6,13 +6,22 @@ export default class LoginForm extends Component {
         return (
             <View style={styles.container}>
                 <TextInput underlineColorAndroid='rgba(0,0,0,0)'
+                    keyboardType="email-address" // determine the type of keyBoard to Username to use
+                    autoCapitalize="none" // Mostly for iOS
+                    autoCorrect="none" // Mostly for iOS
                     placeholder="Username or email"
                     placeholderTextColor="rgba(28, 133, 184, 0.48)"
+                    returnKeytype="next" // This changes the returnKey label in iOS
+                    // The line below instructs the cursor to move to the next field
+                    onSubmitEditing = {() => this.passwordInput.focus()}
                     style={styles.input} />
                 <TextInput underlineColorAndroid='rgba(0,0,0,0)'
                     placeholderTextColor="rgba(28, 133, 184, 0.48)"
-                    secureTextEntry
+                    secureTextEntry // This hides the password input
+                    returnKeytype="go" // This changes the returnKey label in iOS
                     placeholder="password"
+                    // Function to Assign the input to a variable for storage purposes
+                    ref={(input) => this.passwordInput = input }
                     style={styles.input} />
                 <TouchableOpacity style={styles.loginButton}>
                     <Text style={styles.loginButtonText}>LOGIN</Text>
