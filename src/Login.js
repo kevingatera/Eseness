@@ -2,22 +2,24 @@ import React, { Component} from 'react';
 import {
     StyleSheet,
     View, KeyboardAvoidingView,
-    Image, Text
+    Image, Text, StatusBar
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LoginForm from './loginForm';
 
 export default class Login extends Component {
+
     render() {
         return(
             <KeyboardAwareScrollView style={styles.container}>
+                <StatusBar backgroundColor="rgba(8, 135, 198, 0.9)" />
                 <View style={styles.logoContainer}>
                     <Image
                         style={styles.logo}
                         source={require('./../SplashCenter.png')}
                     />
                     <Text style={styles.logoSubtitle}>
-                        This app is brought to you by Essness
+                        This app is brought to you by Esseness
                     </Text>
                 </View>
 
