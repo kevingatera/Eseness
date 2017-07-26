@@ -3,15 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_0d67bd4e5efc2e96e9f9ab940dbce98f4ab968b6.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -27,6 +18,69 @@
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
         <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_0d0f17a070b0f4e42a0b85116c204b5a3f0ac5ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_d71c36a5ca6ec331b10f440f5bb1d80ffca11884.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_29c01e45ee8bb2c374821c2bc49d7b7b7e4a8eed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.0/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_de5cce4c5bd447aec0d44bed66beef04b275d22c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_f919b900030517d01c760572ef64aec2ba1bff30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_34a0a2b8f7ba6e550ab5753cd0551aee6b4a3e39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_15cb532261c2176ecae80672f915929a02f5cc73.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_0d67bd4e5efc2e96e9f9ab940dbce98f4ab968b6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,48 +120,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/kevingatera/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_d71c36a5ca6ec331b10f440f5bb1d80ffca11884.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
         <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_0a0a807bd689198a45ff078a9c81f7223a82861c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kevingatera/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_29c01e45ee8bb2c374821c2bc49d7b7b7e4a8eed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.0/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_de5cce4c5bd447aec0d44bed66beef04b275d22c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_f919b900030517d01c760572ef64aec2ba1bff30.jar" />
     </item>
     <item
         is-multidex="false"
@@ -144,24 +162,6 @@
         revision="23.0.1"
         sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
         <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_55c72a8c28723d36e7aca0c33000ed73d0c9011c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_34a0a2b8f7ba6e550ab5753cd0551aee6b4a3e39.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_15cb532261c2176ecae80672f915929a02f5cc73.jar" />
     </item>
     <item
         is-multidex="false"
