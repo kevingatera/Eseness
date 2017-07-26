@@ -4,12 +4,13 @@ import {
     View, KeyboardAvoidingView,
     Image, Text
 } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LoginForm from './loginForm';
 
 export default class Login extends Component {
     render() {
         return(
-            <KeyboardAvoidingView style={styles.container}>
+            <KeyboardAwareScrollView style={styles.container}>
                 <View style={styles.logoContainer}>
                     <Image
                         style={styles.logo}
@@ -23,7 +24,7 @@ export default class Login extends Component {
                 <View style={styles.loginForm}>
                     <LoginForm />
                 </View>
-            </KeyboardAvoidingView>
+            </KeyboardAwareScrollView>
         );
     }
 }

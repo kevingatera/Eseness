@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {
-	KeyboardAvoidingView,
+	// KeyboardAvoidingView,
 	Platform,
 	View,
 } from 'react-native';

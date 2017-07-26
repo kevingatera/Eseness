@@ -1,10 +1,10 @@
 import React, { Component} from 'react';
-import { StyleSheet, View, TextInput, TouchableOpacity, Text, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, View, TextInput, TouchableOpacity, Text } from 'react-native';
 
 export default class LoginForm extends Component {
     render(){
         return (
-            <KeyboardAvoidingView style={styles.container}>
+            <View style={styles.container}>
                 <TextInput underlineColorAndroid='rgba(0,0,0,0)'
                     placeholder="Username or email"
                     placeholderTextColor="rgba(28, 133, 184, 0.48)"
@@ -17,7 +17,7 @@ export default class LoginForm extends Component {
                 <TouchableOpacity style={styles.loginButton}>
                     <Text style={styles.loginButtonText}>LOGIN</Text>
                 </TouchableOpacity>
-            </KeyboardAvoidingView>
+            </View>
         );
     }
 }
@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
     },
     input: {
         marginBottom: 15,
-        paddingHorizontal: 10, // For padding the text inside the textBox
+        paddingHorizontal: 8, // For padding the text inside the textBox
         borderRadius: 15,
         color: '#1c85b8',
-        fontSize: 15,
+        fontSize: 20,
         fontWeight: 'bold',
         backgroundColor: 'rgba(255,255,255,0.2)',
         textAlign: 'center',
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     },
     loginButtonText: {
         color: '#02699c',
-        fontSize: 15,
+        fontSize: 25,
         fontWeight: 'bold',
     }
 })
