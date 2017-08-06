@@ -21,12 +21,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/kevingatera/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_d71c36a5ca6ec331b10f440f5bb1d80ffca11884.jar" />
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_73fc8727b4e92ba68064ab84feec21504baebb4d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_3238d3fc607a4e351c7e61d86025210e735f86c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_acdb9c6d5fc43e3db6286a07ad2d016600058e7e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -48,30 +66,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_f919b900030517d01c760572ef64aec2ba1bff30.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
         <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_34a0a2b8f7ba6e550ab5753cd0551aee6b4a3e39.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_15cb532261c2176ecae80672f915929a02f5cc73.jar" />
     </item>
     <item
         is-multidex="false"
@@ -111,6 +111,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/Eseness/react-native-splash-screen/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="31432ca253fc03b2a1420995da8953c5a91adbab">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/Eseness-react-native-splash-screen-unspecified_4d8b1ffec1dbf8f64b7a2b54c0ffead15303f09f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/kevingatera/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
         optimize="true"
@@ -120,21 +129,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_0a0a807bd689198a45ff078a9c81f7223a82861c.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
         <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_83c9c89b09a761a65277ae1965f30d58d85b58bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_7ec33b36449d730e481e9e6f9b3177e474a5246d.jar" />
     </item>
     <item
         is-multidex="false"
@@ -162,6 +171,24 @@
         revision="23.0.1"
         sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
         <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_55c72a8c28723d36e7aca0c33000ed73d0c9011c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_53e4e2b6ec11f6ce909f847ec9ae988a0bca4924.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_d27c0b5386478875cc73890f55b1dbc9e275bb7b.jar" />
     </item>
     <item
         is-multidex="false"

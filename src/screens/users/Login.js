@@ -5,9 +5,15 @@ import {
     Image, Text, StatusBar
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import SplashScreen from 'react-native-splash-screen';
+
 import LoginForm from './loginForm';
 
 export default class Login extends Component {
+
+    componentDidMount() {
+        SplashScreen.hide();
+    }
 
     render() {
         return(
