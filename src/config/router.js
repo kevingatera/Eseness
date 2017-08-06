@@ -5,10 +5,11 @@ import { icon } from 'react-native-elements';
 
 // Import relevant screens
 import Login from '../screens/users/Login';
+import Workout from '../screens/workout/workout';
 
 export const Tabs = TabNavigator({
     // Objects that represent screens
-    Login: {
-        screen: Login,
+    Workout: {
+        screen: Workout,
     }
 })

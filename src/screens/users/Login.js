@@ -15,6 +15,12 @@ export default class Login extends Component {
         SplashScreen.hide();
     }
 
+    static navigationOptions = {
+        header: {
+            visible: false,
+        }
+    }
+
     render() {
         return(
             <KeyboardAwareScrollView style={styles.container}>

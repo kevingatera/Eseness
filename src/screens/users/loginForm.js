@@ -54,6 +54,7 @@ export default class LoginForm extends Component {
                     // Function to Assign the input to a variable for reference purposes
                     ref={(input) => this.passwordInput = input }
                     style={styles.input} />
+
                 <TouchableOpacity onPress={loginUser} style={styles.loginButton}>
                     <Text style={styles.loginButtonText}> Signup </Text>
                 </TouchableOpacity>
