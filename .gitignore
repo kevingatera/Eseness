@@ -40,7 +40,7 @@ build/Release
 node_modules/
 jspm_packages/
 .expo/
-expo
+expo/
 
 # Typescript v1 declaration files
 typings/
