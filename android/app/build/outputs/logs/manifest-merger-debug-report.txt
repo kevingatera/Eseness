@@ -27,6 +27,8 @@ MERGED from [com.facebook.react:react-native:0.46.0] /home/kevingatera/Desktop/E
 uses-sdk
 ADDED from /home/kevingatera/Desktop/Eseness/android/app/src/main/AndroidManifest.xml:9:5-11:41
 MERGED from [Eseness:react-native-splash-screen:unspecified] /home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/Eseness/react-native-splash-screen/unspecified/AndroidManifest.xml:7:5-9:41
+MERGED from [Eseness:react-native-wheel-picker:unspecified] /home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/Eseness/react-native-wheel-picker/unspecified/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.aigestudio.wheelpicker:WheelPicker:1.0.3] /home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/cn.aigestudio.wheelpicker/WheelPicker/1.0.3/AndroidManifest.xml:8:5-10:41
 MERGED from [com.facebook.react:react-native:0.46.0] /home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44

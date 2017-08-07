@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.cboy.rn.splashscreen.SplashScreenReactPackage; // for react-native-splash-screen
+import com.zyu.ReactNativeWheelPickerPackage; // For react-native-wheel-picker
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -21,13 +22,16 @@ public class MainApplication extends Application implements ReactApplication {
       return BuildConfig.DEBUG;
     }
 
+    // For both react-native-splash-screen & react-native-wheel-picker
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new SplashScreenReactPackage()
+          new SplashScreenReactPackage(),
+          new ReactNativeWheelPickerPackage()
       );
     }
+
   };
 
   @Override

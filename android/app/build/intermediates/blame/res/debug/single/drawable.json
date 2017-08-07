@@ -8,6 +8,10 @@
         "source": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_item_background_holo_light.xml"
     },
     {
+        "merged": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/res/merged/debug/drawable/mydivider.xml",
+        "source": "/home/kevingatera/Desktop/Eseness/android/app/src/main/res/drawable/mydivider.xml"
+    },
+    {
         "merged": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
         "source": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_ratingbar_small_material.xml"
     },
@@ -70,6 +74,10 @@
     {
         "merged": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
         "source": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/res/merged/debug/drawable/bg_btn.xml",
+        "source": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/cn.aigestudio.wheelpicker/WheelPicker/1.0.3/res/drawable/bg_btn.xml"
     },
     {
         "merged": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
