@@ -34,4 +34,6 @@ export const Tabs = TabNavigator({
             backgroundColor: 'rgba(8, 135, 198, 0.9)',
         },
     }
-})
+});
+
+console.log('I leaked!');

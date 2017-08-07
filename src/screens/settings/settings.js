@@ -5,13 +5,7 @@ import {
     Image, Text, StatusBar
 } from 'react-native';
 
-import SplashScreen from 'react-native-splash-screen';
-
 export default class Settings extends Component {
-
-    componentDidMount() {
-        SplashScreen.hide();
-    }
 
     onValueChange = (key , value) => {
         console.log(key + value);
@@ -46,7 +40,7 @@ export default class Settings extends Component {
                     <item style={styles.pickerStyle} label="Game Time workout" value="game"></item>
                     <item style={styles.pickerStyle} label="Vibe and Chill workout" value="vibe"></item>
                 </Picker>
-                
+
                 <Text style={styles.optionsTitle}>Choose your level</Text>
                 <Picker selectedValue={this.state.level}
                     style={styles.pickerStyle}

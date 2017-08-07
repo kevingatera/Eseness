@@ -6,11 +6,12 @@ import {
 } from 'react-native';
 
 import SplashScreen from 'react-native-splash-screen';
+import TimerMixin from 'react-timer-mixin';
 
 export default class Statistics extends Component {
 
     componentDidMount() {
-        SplashScreen.hide();
+        setTimeout(() => SplashScreen.hide(), 3000);
     }
 
     onValueChange = (key , value) => {

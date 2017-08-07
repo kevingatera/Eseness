@@ -16,6 +16,8 @@ var vibeList = ['Warm up', 'Pulse', 'Endurance', 'Steps', 'Game Time', 'Vibe & C
 
 export default class Statistics extends Component {
 
+    
+
     onPickerSelect = (index) => {
         this.setState({
             selectedItem: index,
