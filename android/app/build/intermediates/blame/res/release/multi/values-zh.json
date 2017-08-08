@@ -1,0 +1,49 @@
+[
+    {
+        "outputFile": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-zh/values-zh.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 15,
+                    "endColumn": 19,
+                    "endOffset": 420
+                },
+                "from": {
+                    "file": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/cn.aigestudio.wheelpicker/WheelPicker/1.0.3/res/values-zh/values-zh.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 15,
+                        "endColumn": 19,
+                        "endOffset": 420
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 425,
+                    "endLine": 29,
+                    "endColumn": 19,
+                    "endOffset": 759
+                },
+                "from": {
+                    "file": "/home/kevingatera/Desktop/Eseness/android/app/build/intermediates/exploded-aar/cn.aigestudio.wheelpicker/WheelPicker/1.0.3/res/values-zh/values-zh.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 425,
+                        "endLine": 29,
+                        "endColumn": 19,
+                        "endOffset": 759
+                    }
+                }
+            }
+        ]
+    }
+]

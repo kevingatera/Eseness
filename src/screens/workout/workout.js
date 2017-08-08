@@ -1,165 +1,142 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
 import {
-    StyleSheet, Picker, ScrollView,
-    View, TouchableOpacity,
-    Image, Text, StatusBar
+  StyleSheet,
+  Text,
+  View, TouchableOpacity,
 } from 'react-native';
 
-import SplashScreen from 'react-native-splash-screen';
-import TimerMixin from 'react-timer-mixin';
+import Picker from 'react-native-wheel-picker';
 
-export default class Statistics extends Component {
+var Item = Picker.Item;
+var levelList = ['Level 1', 'Level 2', 'Level 3', 'Level 4'];
+var vibeList = ['Warm up', 'Pulse', 'Endurance', 'Steps', 'Game Time', 'Vibe & Chill']
 
-    componentDidMount() {
-        setTimeout(() => SplashScreen.hide(), 3000);
-    }
 
-    onValueChange = (key , value) => {
-        console.log(key + value);
-        this.setState({level: value})
-    }
 
-    static navigationOptions = {
-        header: {
-            visible: true,
+export default class Workout extends Component {
+
+
+
+    onPickerSelect = (index) => {
+        this.setState({
+            selectedItem: index,
+        })
+    };
+
+    switchMoodAndLevel = () => {
+        if (this.state.selectedOption === 1){
+            resetState();
         }
-    }
+        else {
+            this.setState({
+                questionIndex: 1,
+                selectedOption: 1,
+                itemList: levelList,
+            })
+        }
+    };
+
+    /* ====== OPTION TO ADD SOMETHING ON THE LIST
+    onAddItem = () => {
+        var name = '司马懿'
+        if (this.state.itemList.indexOf(name) == -1) {
+            this.state.itemList.push(name)
+        }
+        this.setState({
+            selectedItem: this.state.itemList.indexOf(name),
+        })
+    }; */
 
     render() {
-        return(
-            <ScrollView style={styles.container}>
-                <StatusBar backgroundColor="rgba(8, 135, 198, 0.9)" />
+        return (
+            <View style={styles.container}>
+                <Picker
+                    style={{width: 300, height: 200}}
+                    selectedValue={this.state.selectedItem}
+                    itemStyle={{color:'white', fontSize:40}}
+                    onValueChange={(index) => {
+                        // this.switchMoodAndLevel();
+                        this.onPickerSelect(index)
+                    }}>
+                    {this.state.itemList.map((value, i) => (
+                        <Item label={value} value={i} key={"money"+value}/>
+                    ))}
+                </Picker>
+                <Text style={{margin: 50, fontSize: 20, color: '#ffffff'}}>
+                    {this.state.questionList[this.state.questionIndex]}：{this.state.itemList[this.state.selectedItem]}
+                </Text>
+                <Text
+                    style={{margin: 20, color: '#ffffff', textDecorationLine: 'underline'}}
+                    onPress={this.switchMoodAndLevel}>
+                    {this.state.optionsList[this.state.selectedOption]}
+                </Text>
                 <TouchableOpacity onPress={ connectToBle } style={styles.startButton}>
                     <Text style={ styles.startText }>START</Text>
                 </TouchableOpacity>
-                <Text style={styles.optionsTitle}>Warm up</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Warm up"
-                    enabled={true}
-                    mode="dropdown">
-                    <item style={styles.pickerStyle} label="Level 1" value="level 1"></item>
-                    <item style={styles.pickerStyle} label="Level 2" value="level 2"></item>
-                    <item style={styles.pickerStyle}  label="Level 3" value="level 3"></item>
-                    <item style={styles.pickerStyle} label="Level 4" value="level 4"></item>
-                </Picker>
-                <Text style={styles.optionsTitle}>Pulse workout</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Pulse workout"
-                    enabled={true}
-                    mode="dropdown">
-                    <item style={styles.pickerStyle} label="Level 1" value="level 1"></item>
-                    <item style={styles.pickerStyle} label="Level 2" value="level 2"></item>
-                    <item style={styles.pickerStyle} label="Level 3" value="level 3"></item>
-                    <item style={styles.pickerStyle} label="Level 4" value="level 4"></item>
-                </Picker>
-                <Text style={styles.optionsTitle}>Endurance workout</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Endurance workout"
-                    enabled={true}
-                    mode="dropdown">
-                    <item style={styles.pickerStyle} label="Level 1" value="level 1"></item>
-                    <item style={styles.pickerStyle} label="Level 2" value="level 2"></item>
-                    <item style={styles.pickerStyle} label="Level 3" value="level 3"></item>
-                    <item style={styles.pickerStyle} label="Level 4" value="level 4"></item>
-                </Picker>
-                <Text style={styles.optionsTitle}>Steps workout</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Steps workout"
-                    enabled={true}
-                    mode="dropdown">
-                    <item style={styles.pickerStyle} label="Level 1" value="level 1"></item>
-                    <item style={styles.pickerStyle} label="Level 2" value="level 2"></item>
-                    <item style={styles.pickerStyle} label="Level 3" value="level 3"></item>
-                    <item style={styles.pickerStyle} label="Level 4" value="level 4"></item>
-                </Picker>
-                <Text style={styles.optionsTitle}>Game Time workout</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Game Time workout"
-                    enabled={true}
-                    mode="dropdown">
-                    <item label="Level 1" value="level 1"></item>
-                    <item label="Level 2" value="level 2"></item>
-                    <item label="Level 3" value="level 3"></item>
-                    <item label="Level 4" value="level 4"></item>
-                </Picker>
-                <Text style={styles.optionsTitle}>Vibe and Chill workout</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Vibe and Chill"
-                    enabled={true}
-                    mode="dropdown">
-                    <item color="red" label="Level 1" value="level 1"></item>
-                    <item style={styles.pickerStyle} label="Level 2" value="level 2"></item>
-                    <item style={styles.pickerStyle} label="Level 3" value="level 3"></item>
-                    <item style={styles.pickerStyle} label="Level 4" value="level 4"></item>
-                </Picker>
-            </ScrollView>
+            </View>
         );
     }
 
+      constructor(props){
+          super(props);
 
-    constructor(props) {
-        super(props);
+          this.state = {
+              questionIndex: 0,
+              questionList: [ 'What\'s your mood?', 'How hard do you like it?'  ],
+              optionsList: [ 'Humm... Wanna change the level of fun?', 'Humm... Wanna change the mood?' ],
+              selectedItem : 2,
+              selectedOption: 0,
+              itemList: vibeList,
+          }
 
-        this.state = {
-            level: 'Warm up'
-        };
+          // preserve the initial state in a new object
+          this.baseState = this.state;
 
-        connectToBle = () => {
-            alert('Connecting to device...');
-        };
-    }
-}
+          // Reset the state
+          resetState = () => {
+              this.setState(this.baseState)
+          }
+
+          connectToBle = () => {
+              alert('Connecting to device...');
+          };
+      }
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'skyblue',
-    },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#1962dd'
+    // backgroundColor: '#b7eaff',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+    color: '#ffffff',
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
 
-    startButton: {
-        backgroundColor: 'rgb(14, 66, 129)',
-        marginVertical: 30,
-        marginHorizontal: 70,
-        alignItems: 'center',
-        borderRadius: 800,
-    },
+  startButton: {
+      backgroundColor: 'rgb(0, 41, 133)',
+      marginTop: 40,
+      marginHorizontal: 50,
+      alignItems: 'center',
+      borderRadius: 80,
+      paddingHorizontal: 35,
+      paddingVertical: 10,
+  },
 
-    startText: {
-        color: 'rgb(124, 175, 235)',
-        fontSize: 50,
-        justifyContent: 'center',
-    },
-
-    pickerStyle: {
-        marginHorizontal: 40,
-        backgroundColor: '#29A1C9',
-        borderRadius: 100,
-        marginBottom: 20,
-        color: 'rgb(147, 189, 238)',
-    },
-
-    pickerItemStyle: {
-        justifyContent: 'center',
-    },
-
-    optionsTitle: {
-        fontSize: 20,
-        color: 'rgb(0, 19, 60)',
-        marginHorizontal: 40,
-        fontWeight: 'bold',
-    }
-
-
-})
+  startText: {
+      color: 'rgb(124, 175, 235)',
+      fontSize: 40,
+      justifyContent: 'center',
+  },
+});
