@@ -15,7 +15,7 @@ export default class Statistics extends Component {
 
     componentDidMount() {
         setTimeout(() => SplashScreen.hide(), 3000);
-        this.setStateInterval = window.setInterval(customAnimHandler, 500);
+        this.setStateInterval = window.setInterval(customAnimHandler, 2000);
     }
 
     onValueChange = (key , value) => {
@@ -43,11 +43,11 @@ export default class Statistics extends Component {
                     <VictoryArea
                         animate={{
                                onExit: {
-                                 duration: 250,
+                                 duration: 500,
                                  before: () => ({ opacity: 0.3, _y: 0 })
                                },
                                onEnter: {
-                                 duration: 250,
+                                 duration: 500,
                                  before: () => ({ opacity: 0.3, _y: 0 }),
                                  after: (datum) => ({ opacity: 1, _y: datum._y })
                                }
@@ -91,7 +91,7 @@ export default class Statistics extends Component {
                 { x: 'Sat', y: 6 },
                 { x: 'Sun', y: 8 },
             ],
-            count: 10,
+            count: 1,
         };
 
 
@@ -127,9 +127,10 @@ export default class Statistics extends Component {
                     count: newCount
                 });
             } else {
-                console.log('YIyah' + this.state.data._x);
-                window.clearInterval(this.setStateInterval);
                 resetState();
+                console.log('YIyah => ' + this.state.data[0].y);
+                window.clearInterval(this.setStateInterval);
+                this.forceUpdate();
             }
         }
     }
