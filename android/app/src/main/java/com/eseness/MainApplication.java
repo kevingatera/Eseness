@@ -13,6 +13,7 @@ import java.util.List;
 
 import com.cboy.rn.splashscreen.SplashScreenReactPackage; // for react-native-splash-screen
 import com.zyu.ReactNativeWheelPickerPackage; // For react-native-wheel-picker
+import com.horcrux.svg.SvgPackage; // For react-native-svg
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -28,7 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new SplashScreenReactPackage(),
-          new ReactNativeWheelPickerPackage()
+          new ReactNativeWheelPickerPackage(),
+          new SvgPackage()
       );
     }
 

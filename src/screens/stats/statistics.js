@@ -5,6 +5,9 @@ import {
     Image, Text, StatusBar
 } from 'react-native';
 
+
+import { VictoryChart, VictoryLine } from "victory-native";
+
 import SplashScreen from 'react-native-splash-screen';
 import TimerMixin from 'react-timer-mixin';
 
@@ -28,7 +31,23 @@ export default class Statistics extends Component {
     render() {
         return(
             <ScrollView style={styles.container}>
+
                 <StatusBar backgroundColor="rgba(8, 135, 198, 0.9)" />
+
+                <VictoryChart>
+                    <VictoryLine
+                        data={[
+                            { x: 'Mon', y: 2 },
+                            { x: 'Tue', y: 3 },
+                            { x: 'Wed', y: 5 },
+                            { x: 'Thurs', y: 4 },
+                            { x: 'Fri', y: 3 },
+                            { x: 'Sat', y: 6 },
+                            { x: 'Sun', y: 8 },
+                        ]}
+                    />
+                </VictoryChart>
+
                 <TouchableOpacity onPress={ connectToBle } style={styles.startButton}>
                     <Text style={ styles.startText }>START</Text>
                 </TouchableOpacity>
