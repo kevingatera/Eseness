@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import {
-    StyleSheet, Picker, ScrollView,
-    View, TouchableOpacity,
+    StyleSheet, Picker, ListView,
+    View, TouchableOpacity, TouchableHighlight,
     Image, Text, StatusBar
 } from 'react-native';
 
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 export default class Settings extends Component {
-
-    onValueChange = (key , value) => {
-        console.log(key + value);
-        this.setState({level: value})
-    }
 
     static navigationOptions = {
         header: {
@@ -33,8 +28,20 @@ export default class Settings extends Component {
     constructor(props) {
         super(props);
 
+        var dataSource = new ListView.DataSource({
+            rowHasChanged: (r1, r2) => {
+                if (r1.guid != r2.guid) {
+                    return false;
+                } else {
+                    return false;
+                }
+            }
+        });
+
         this.state = {
-            level: 'Warm up'
+            dataSource: dataSource.cloneWithRows({
+
+            })
         };
 
         connectToBle = () => {
@@ -46,7 +53,8 @@ export default class Settings extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'skyblue',
+        backgroundColor: 'rgb(8, 135, 198)',
+        // backgroundColor: 'skyblue',
     },
 
     startButton: {

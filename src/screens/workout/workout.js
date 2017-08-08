@@ -109,8 +109,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1962dd'
-    // backgroundColor: '#b7eaff',
+    backgroundColor: 'rgb(8, 135, 198)',
+    // backgroundColor: '#1962dd' // very blue
+    // backgroundColor: '#b7eaff', // light blue
   },
   welcome: {
     fontSize: 20,
