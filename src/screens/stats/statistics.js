@@ -15,6 +15,10 @@ export default class Statistics extends Component {
 
     componentDidMount() {
         setTimeout(() => SplashScreen.hide(), 3000);
+<<<<<<< HEAD
+=======
+        this.setStateInterval = window.setInterval(customAnimHandler, 2000);
+>>>>>>> 90c4488834fe05eee8cad9c7059af969f563272c
     }
 
     onValueChange = (key , value) => {
