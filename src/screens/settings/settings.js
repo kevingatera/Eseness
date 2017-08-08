@@ -5,6 +5,8 @@ import {
     Image, Text, StatusBar
 } from 'react-native';
 
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+
 export default class Settings extends Component {
 
     onValueChange = (key , value) => {
@@ -20,40 +22,10 @@ export default class Settings extends Component {
 
     render() {
         return(
-            <ScrollView style={styles.container}>
+            <KeyboardAwareScrollView style={styles.container}>
                 <StatusBar backgroundColor="rgba(8, 135, 198, 0.9)" />
-                <TouchableOpacity onPress={ connectToBle } style={styles.startButton}>
-                    <Text style={ styles.startText }>START</Text>
-                </TouchableOpacity>
 
-                <Text style={styles.optionsTitle}>Warm up</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Warm up"
-                    enabled={true}
-                    mode="dropdown">
-                    <item style={styles.pickerStyle} label="Warm up workout" value="warm"></item>
-                    <item style={styles.pickerStyle} label="Pulse workout" value="pulse"></item>
-                    <item style={styles.pickerStyle}  label="Endurance workout" value="endurance"></item>
-                    <item style={styles.pickerStyle} label="Steps workout" value="steps"></item>
-                    <item style={styles.pickerStyle} label="Game Time workout" value="game"></item>
-                    <item style={styles.pickerStyle} label="Vibe and Chill workout" value="vibe"></item>
-                </Picker>
-
-                <Text style={styles.optionsTitle}>Choose your level</Text>
-                <Picker selectedValue={this.state.level}
-                    style={styles.pickerStyle}
-                    onValueChange={this.onValueChange.bind(this, 'level')}
-                    prompt="Vibe and Chill"
-                    enabled={true}
-                    mode="dropdown">
-                    <item style={styles.pickerStyle} label="Level 1" value="level 1"></item>
-                    <item style={styles.pickerStyle} label="Level 2" value="level 2"></item>
-                    <item style={styles.pickerStyle} label="Level 3" value="level 3"></item>
-                    <item style={styles.pickerStyle} label="Level 4" value="level 4"></item>
-                </Picker>
-            </ScrollView>
+            </KeyboardAwareScrollView>
         );
     }
 
@@ -112,3 +84,36 @@ const styles = StyleSheet.create({
 
 
 })
+
+
+{/* <TouchableOpacity onPress={ connectToBle } style={styles.startButton}>
+<Text style={ styles.startText }>START</Text>
+</TouchableOpacity>
+
+<Text style={styles.optionsTitle}>Warm up</Text>
+<Picker selectedValue={this.state.level}
+style={styles.pickerStyle}
+onValueChange={this.onValueChange.bind(this, 'level')}
+prompt="Warm up"
+enabled={true}
+mode="dropdown">
+<item style={styles.pickerStyle} label="Warm up workout" value="warm"></item>
+<item style={styles.pickerStyle} label="Pulse workout" value="pulse"></item>
+<item style={styles.pickerStyle}  label="Endurance workout" value="endurance"></item>
+<item style={styles.pickerStyle} label="Steps workout" value="steps"></item>
+<item style={styles.pickerStyle} label="Game Time workout" value="game"></item>
+<item style={styles.pickerStyle} label="Vibe and Chill workout" value="vibe"></item>
+</Picker>
+
+<Text style={styles.optionsTitle}>Choose your level</Text>
+<Picker selectedValue={this.state.level}
+style={styles.pickerStyle}
+onValueChange={this.onValueChange.bind(this, 'level')}
+prompt="Vibe and Chill"
+enabled={true}
+mode="dropdown">
+<item style={styles.pickerStyle} label="Level 1" value="level 1"></item>
+<item style={styles.pickerStyle} label="Level 2" value="level 2"></item>
+<item style={styles.pickerStyle} label="Level 3" value="level 3"></item>
+<item style={styles.pickerStyle} label="Level 4" value="level 4"></item>
+</Picker> */}

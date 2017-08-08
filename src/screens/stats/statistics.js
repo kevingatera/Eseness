@@ -15,6 +15,7 @@ export default class Statistics extends Component {
 
     componentDidMount() {
         setTimeout(() => SplashScreen.hide(), 3000);
+        this.setStateInterval = window.setInterval(customAnimHandler, 500);
     }
 
     onValueChange = (key , value) => {
@@ -28,6 +29,10 @@ export default class Statistics extends Component {
         }
     }
 
+    componentWillUnmount() {
+      window.clearInterval(this.setStateInterval);
+    }
+
     render() {
         return(
             <ScrollView style={styles.container}>
@@ -36,7 +41,17 @@ export default class Statistics extends Component {
 
                 <VictoryChart>
                     <VictoryArea
-                        animate={{ duration: 3000 }}
+                        animate={{
+                               onExit: {
+                                 duration: 250,
+                                 before: () => ({ opacity: 0.3, _y: 0 })
+                               },
+                               onEnter: {
+                                 duration: 250,
+                                 before: () => ({ opacity: 0.3, _y: 0 }),
+                                 after: (datum) => ({ opacity: 1, _y: datum._y })
+                               }
+                             }}
                         style={
                             {
                                 parent: {
@@ -71,11 +86,51 @@ export default class Statistics extends Component {
                 { x: 'Mon', y: 2 },
                 { x: 'Tue', y: 3 },
                 { x: 'Wed', y: 5 },
-                { x: 'Thurs', y: 4 },
+                { x: 'Thur', y: 4 },
                 { x: 'Fri', y: 3 },
                 { x: 'Sat', y: 6 },
                 { x: 'Sun', y: 8 },
             ],
+            count: 10,
+        };
+
+
+        resetState = () => {
+            this.state = {
+                data: [
+                    { x: 'Mon', y: 2 },
+                    { x: 'Tue', y: 3 },
+                    { x: 'Wed', y: 5 },
+                    { x: 'Thur', y: 4 },
+                    { x: 'Fri', y: 3 },
+                    { x: 'Sat', y: 6 },
+                    { x: 'Sun', y: 8 },
+                ],
+                count: 10,
+            };
+        }
+
+        getRandomizedData = () => {
+            const num = Math.floor(10 * Math.random() + 5);
+            const points = new Array(num).fill(1);
+            return points.map((point, index) => {
+                return { x: index + 1, y: Math.random() };
+            });
+        };
+
+        customAnimHandler = () => {
+            var newCount = this.state.count - 1;
+            if(newCount >= 0) {
+                console.log(this.state.count);
+                this.setState({
+                    data: getRandomizedData(),
+                    count: newCount
+                });
+            } else {
+                console.log('YIyah' + this.state.data._x);
+                window.clearInterval(this.setStateInterval);
+                resetState();
+            }
         }
     }
 
