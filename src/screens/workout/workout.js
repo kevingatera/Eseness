@@ -26,7 +26,8 @@ export default class Workout extends Component {
 
     switchMoodAndLevel = () => {
         if (this.state.selectedOption === 1){
-            resetState();
+            // console.log('attempting to reset state');
+            this.resetState();
         }
         else {
             this.setState({
@@ -94,8 +95,9 @@ export default class Workout extends Component {
           this.baseState = this.state;
 
           // Reset the state
-          resetState = () => {
-              this.setState(this.baseState)
+          this.resetState = () => {
+            //   console.log('State was reset');
+              this.setState(this.baseState);
           }
 
           connectToBle = () => {

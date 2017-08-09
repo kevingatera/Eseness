@@ -15,19 +15,33 @@ export default class Settings extends Component {
         }
     }
 
+    renderRow(rowData, sectionID, rowID) {
+        return (
+            <TouchableHighlight underlayColor="blue" style={ { height: 40 } }>
+                <View>
+                    <Text style={styles.rowText}  numberOfLines={1}>
+                            {rowData}
+                    </Text>
+                    <View style={{ height: 1, backgroundColor: 'green' }}></View>
+                </View>
+            </TouchableHighlight>
+        )
+    }
+
     render() {
         return(
-            <KeyboardAwareScrollView style={styles.container}>
-                <StatusBar backgroundColor="rgba(8, 135, 198, 0.9)" />
-
-            </KeyboardAwareScrollView>
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={this.renderRow.bind(this)}
+                style={styles.container}
+                ></ListView>
         );
     }
 
 
     constructor(props) {
         super(props);
-
+        // Check if the row has changed during rendering
         var dataSource = new ListView.DataSource({
             rowHasChanged: (r1, r2) => {
                 if (r1.guid != r2.guid) {
@@ -38,10 +52,12 @@ export default class Settings extends Component {
             }
         });
 
-        this.state = {
-            dataSource: dataSource.cloneWithRows({
+        var settingsList = ["Name:", "Age:", "Setup a reminder", "Clear all data"];
 
-            })
+        this.state = {
+            // Decide on how many rows the view is gonna have
+            //  and send in data row by row
+            dataSource: dataSource.cloneWithRows(settingsList)
         };
 
         connectToBle = () => {
@@ -55,20 +71,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'rgb(8, 135, 198)',
         // backgroundColor: 'skyblue',
-    },
-
-    startButton: {
-        backgroundColor: 'rgb(14, 66, 129)',
-        marginVertical: 50,
-        marginHorizontal: 70,
-        alignItems: 'center',
-        borderRadius: 800,
-    },
-
-    startText: {
-        color: 'rgb(124, 175, 235)',
-        fontSize: 50,
-        justifyContent: 'center',
     },
 
     pickerStyle: {
@@ -88,8 +90,13 @@ const styles = StyleSheet.create({
         color: 'rgb(0, 19, 60)',
         marginHorizontal: 30,
         fontWeight: 'bold'
-    }
+    },
 
+    rowText: {
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold',
+    },
 
 })
 

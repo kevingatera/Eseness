@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
     StyleSheet, Picker, ScrollView,
-    View, TouchableOpacity,
+    View, TouchableOpacity, ListView,
+    TouchableHighlight,
     Image, Text, StatusBar
 } from 'react-native';
 
@@ -15,10 +16,6 @@ export default class Statistics extends Component {
 
     componentDidMount() {
         setTimeout(() => SplashScreen.hide(), 3000);
-<<<<<<< HEAD
-=======
-        this.setStateInterval = window.setInterval(customAnimHandler, 2000);
->>>>>>> 90c4488834fe05eee8cad9c7059af969f563272c
     }
 
     onValueChange = (key , value) => {
@@ -34,6 +31,24 @@ export default class Statistics extends Component {
 
     componentWillUnmount() {
       window.clearInterval(this.setStateInterval);
+    }
+
+    renderRow(rowData, sectionID, rowID) {
+        return (
+            <TouchableHighlight underlayColor="blue" style={ {
+                height: 40,
+                borderRadius: 10,
+                backgroundColor: 'rgba(0, 109, 163, 0.5)',
+                marginBottom: 5,
+             } }>
+                <View style={{  }}>
+                    <Text style={styles.statsTextStyle}  numberOfLines={1}>
+                            {rowData}
+                    </Text>
+                    <View style={{ height: 10, backgroundColor: 'rgba(0, 109, 163, 0.7)' }}></View>
+                </View>
+            </TouchableHighlight>
+        )
     }
 
     render() {
@@ -69,12 +84,15 @@ export default class Statistics extends Component {
                     />
                 </VictoryChart>
 
-                <Text style={ { marginHorizontal: 50, fontSize: 25, color: 'rgb(207, 215, 255)'} }>
-                    {'Accuracy: 60 %'} {'\n'}
-                    {'Lowest pressure: Level 1'}{'\n'}
-                    {'Average pressure: Level 2'}{'\n'}
-                    {'Higest Pressure: Level 4'}
-                </Text>
+                <ListView
+                    dataSource={this.state.dataSource}
+                    renderRow={this.renderRow.bind(this)}
+                    style={{
+                        marginHorizontal: 10,
+                        paddingVertical: 10,
+                        Bottom: 0
+                    }}>
+                </ListView>
 
             </ScrollView>
         );
@@ -83,6 +101,25 @@ export default class Statistics extends Component {
     constructor(props){
         super(props);
 
+        var statsList = [
+            'Accuracy: 60 %',
+            'Lowest pressure: 50 atm',
+            'Average pressure: 60 atm',
+            'Higest Pressure: 100 atm',
+            'Latest streak: 3 days',
+            'Calories burnt: 120 cal'
+        ];
+
+        // Check if the row has changed during rendering
+        var dataSource = new ListView.DataSource({
+            rowHasChanged: (r1, r2) => {
+                if (r1.guid != r2.guid) {
+                    return false;
+                } else {
+                    return false;
+                }
+            }
+        });
         this.state = {
             data: [
                 { x: 'Mon', y: 2 },
@@ -94,9 +131,11 @@ export default class Statistics extends Component {
                 { x: 'Sun', y: 8 },
             ],
             count: 1,
+            dataSource: dataSource.cloneWithRows(statsList),
         };
 
         // this.setStateInterval = window.setInterval(this.customAnimHandler, 2000);
+
 
         resetState = () => {
             this.state = {
@@ -177,7 +216,13 @@ const styles = StyleSheet.create({
         color: 'rgb(0, 19, 60)',
         marginHorizontal: 40,
         fontWeight: 'bold',
-    }
+    },
+
+    statsTextStyle: {
+        marginHorizontal: 50,
+        fontSize: 25,
+        color: 'rgb(207, 215, 255)'
+    },
 
 
 })
