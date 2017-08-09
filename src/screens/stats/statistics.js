@@ -84,16 +84,19 @@ export default class Statistics extends Component {
                     />
                 </VictoryChart>
 
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={this.renderRow.bind(this)}
-                    style={{
-                        marginHorizontal: 10,
-                        paddingVertical: 10,
-                        Bottom: 0
-                    }}>
-                </ListView>
-
+                <View style={{ bottom: -10 }}>
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={this.renderRow.bind(this)}
+                        style={{
+                            marginHorizontal: 10,
+                            paddingVertical: 10,
+                        }}>
+                    </ListView>
+                </View>
+                <Text style={{ paddingHorizontal: 10, textAlign: 'center' }}>
+                    * Please the above is approximative
+                </Text>
             </ScrollView>
         );
     }
@@ -221,7 +224,7 @@ const styles = StyleSheet.create({
     statsTextStyle: {
         marginHorizontal: 50,
         fontSize: 25,
-        color: 'rgb(207, 215, 255)'
+        color: 'rgb(207, 215, 255)',
     },
 
 
